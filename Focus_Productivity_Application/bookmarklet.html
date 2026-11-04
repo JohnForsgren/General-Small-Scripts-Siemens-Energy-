@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Focus Bookmarklet</title>
+    <link rel="stylesheet" href="bookmarklet.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">No-install fallback</p>
+        <h1>YouTube Focus Bookmarklet</h1>
+        <p class="lede">
+          If your company blocks extension installation, this page generates a
+          bookmarklet you can save as a normal browser bookmark.
+        </p>
+      </section>
+
+      <section class="card">
+        <div class="actions">
+          <a id="applyLink" class="button" href="#">Drag apply bookmarklet</a>
+          <a id="removeLink" class="button secondary-link" href="#">Drag remove bookmarklet</a>
+        </div>
+
+        <label class="field">
+          <span>Apply code</span>
+          <textarea id="applyCode" readonly rows="8"></textarea>
+        </label>
+
+        <div class="actions compact">
+          <button id="copy" type="button" class="secondary">Copy apply code</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <label class="field">
+          <span>Remove code</span>
+          <textarea id="removeCode" readonly rows="4"></textarea>
+        </label>
+
+        <div class="actions compact">
+          <button id="copyRemove" type="button" class="secondary">Copy remove code</button>
+        </div>
+      </section>
+
+      <section class="card note">
+        <h2>How to use</h2>
+        <ol>
+          <li>Open this file in Chrome.</li>
+          <li>Drag the link to your bookmarks bar, or copy the code into a bookmark URL.</li>
+          <li>Open YouTube and click the bookmarklet to toggle focus mode.</li>
+        </ol>
+      </section>
+    </main>
+
+    <script src="bookmarklet.js"></script>
+  </body>
+</html>

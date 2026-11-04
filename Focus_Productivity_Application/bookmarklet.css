@@ -1,0 +1,117 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #eef2ff 0, #f8fafc 40%, #ffffff 100%);
+  color: #111827;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 20px 56px;
+}
+
+.hero {
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4f46e5;
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.lede {
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+.card {
+  margin-top: 16px;
+  padding: 18px;
+  border: 1px solid #dbe4ff;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.button,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: #111827;
+  color: #ffffff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button.secondary,
+.secondary-link {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #c7d2fe;
+  border-radius: 14px;
+  padding: 14px;
+  resize: vertical;
+  font: 12px/1.5 Consolas, Monaco, monospace;
+  color: #111827;
+  background: #ffffff;
+}
+
+.note h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.note ol {
+  margin: 0;
+  padding-left: 20px;
+  color: #374151;
+  line-height: 1.6;
+}
