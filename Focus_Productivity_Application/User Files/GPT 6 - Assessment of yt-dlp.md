@@ -156,3 +156,64 @@ If that works, try downloading your first MP3:
 Replace YOUTUBE_URL with your selected YouTube link. The MP3 should appear in the same folder.
 
 To update the portable yt-dlp executable later, you can use .\yt-dlp.exe -U or download a newer official release.
+
+
+# Recommendations for updates: 
+For your specific use case—downloading selected YouTube playlists as MP3 files—the security risk is very low. I would still recommend occasional updates, but there's no reason to constantly monitor releases.
+1. Are security updates really necessary?
+YouTube is a relatively trustworthy source compared with arbitrary websites. However, yt-dlp and FFmpeg still process data received over the internet, and vulnerabilities can occasionally exist in that processing.
+
+In practice:
+- Downloading exclusively from YouTube substantially reduces your exposure compared with downloading from unknown websites.
+- Downloading MP3s rather than executable files reduces risk further.
+- Not using advanced options, browser cookies, or third-party plugins eliminates several historically vulnerable features.
+- Updates also maintain compatibility when YouTube changes its systems.
+So updates are worthwhile, but you don't need to treat them as urgent weekly maintenance.
+2. How often should you update?
+Component	Recommended frequency	Importance
+yt-dlp	Every 1–2 months	Recommended
+FFmpeg	Every 3–6 months	Lower priority
+Deno	Every 3–6 months	Lower priority
+
+These are practical recommendations for your limited usage, not official update schedules. Apply known important security fixes sooner.
+
+If you're not using yt-dlp for several months, just check for updates before your next download session.
+
+3. How to update yt-dlp
+Because you installed the portable executable in C:\YT-DLP, updating is simple.
+
+First, check your version:
+C:\YT-DLP\yt-dlp.exe --version
+
+
+Latest verified stable version: 2026.10.26
+
+
+GitHub
+If you already have that version, there's nothing to update at present.
+
+If your version is 2026.10.21 or newer, you can use the built-in updater:
+C:\YT-DLP\yt-dlp.exe -U
+
+
+This checks for and installs an available official update. 
+GitHub
+
+
+One special precaution: In October 2026, yt-dlp fixed vulnerabilities involving certificate verification that could affect older executables. If your installed version is older than 2026.10.21, manually replace yt-dlp.exe using the official GitHub release rather than using -U. 
+GitHub+1
+
+
+For FFmpeg and Deno, updating the portable versions means replacing their executables with newer official releases. There is no need to do that right now if you installed current versions today.
+
+Since this is a company-managed computer, follow any IT requirements for software updates as well.
+
+4. My recommendation for your setup
+I would keep your process extremely simple:
+1. Download MP3 playlists normally.
+2. Once every month or two, check/update yt-dlp.
+3. Update FFmpeg and Deno occasionally, or when a relevant security issue is announced.
+4. Keep Windows security protections enabled.
+That's sufficient for a reasonable, proportionate security approach to this use case.
+
+You don't need a VM, dedicated sandbox, antivirus scanning of every MP3, or complex security procedures. Regular updates and official software sources offer far more practical value here.

@@ -30,3 +30,6 @@ The apply bookmarklet keeps working across YouTube SPA navigation in the same ta
 ## Current scope
 
 This is intentionally narrow: YouTube first, with local-only controls and no account, server, or telemetry layer.
+
+
+The ambient-audio workflow is separate from this browser tool and is not implemented in the extension or bookmarklet. The current yt-dlp setup, playlist-download goal, and remaining verification items are tracked in [UPDATE 2 - New solutions](User%20Files/UPDATE%202%20-%20New%20solutions.md); see the [yt-dlp assessment](User%20Files/GPT%206%20-%20Assessment%20of%20yt-dlp.md) for the security and maintenance review.
