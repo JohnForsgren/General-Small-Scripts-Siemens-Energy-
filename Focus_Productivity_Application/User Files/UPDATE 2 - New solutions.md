@@ -27,9 +27,6 @@ This solves the issue of the distracting youtube start page, but does not fix th
 An assessment by GPT is written in : GPT 6 - Assessment of yt-dlp.md, citing the program as highly secure assuming that i only use it for the limited intended scope for downloading specific ambient sounds, which is the intention. 
 
 
-TASK FOR TODAY: We must implemente this solution on the computer and push the new updates to git. 
-
-
 # ======= USING THE APP =======
 
 * The vision of using the app is basically: 
@@ -40,3 +37,42 @@ TASK FOR TODAY: We must implemente this solution on the computer and push the ne
 
 
 
+# ======= UPDATES ======= 
+
+## SESSION 1 
+
+* I have downloaded and run an initial run of the app here (approved by IT): 
+C:\YT-DLP
+
+Example run [POWERSHELL]: 
+.\yt-dlp.exe --no-playlist -x --audio-format mp3 "https://www.youtube.com/watch?v=JAQ6kxyx7es&list=PLntykjs-tuy7IHk8I78imQYi_Shk0M57y" 
+
+* Topic: I need to be able to download entire playlists at once
+* Topic: Ideally the files should be downloaded to a subfolder , i.e not in the same folder as the exe files 
+
+
+### SOLUTION: 
+
+
+* GPT suggested to create a "yt-dlp.conf" which i have added to the file, containing: 
+    # Download audio as MP3
+    --extract-audio
+    --audio-format mp3
+
+    # Download complete playlists
+    --yes-playlist
+    --ignore-errors
+
+    # One folder for all MP3 files
+    --paths "C:\YT-DLP\Downloads"
+    --output "%(title)s [%(id)s].%(ext)s"
+
+
+* Playlists can be downloaded using commands like: C:\YT-DLP\yt-dlp.exe --yes-playlist --ignore-errors -x --audio-format mp3 -P "C:\YT-DLP\Downloads" -o "%(title)s [%(id)s].%(ext)s" "https://www.youtube.com/playlist?list=PLntykjs-tuy7IHk8I78imQYi_Shk0M57y"
+
+
+
+## SESSION 2
+* CRITICAL CONCERN: Security updates: what do i do here; how often should i do this, and is it really needed if i only download directly from yotuube? 
+
+GPT 6 answer: For your specific use case—downloading selected YouTube playlists as MP3 files—the security risk is very low. I would still recommend occasional updates, but there's no reason to constantly monitor releases. 
