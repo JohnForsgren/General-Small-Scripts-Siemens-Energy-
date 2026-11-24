@@ -58,21 +58,25 @@ Example run [POWERSHELL]:
     # Download audio as MP3
     --extract-audio
     --audio-format mp3
+    --embed-thumbnail
+    --convert-thumbnails jpg
 
     # Download complete playlists
     --yes-playlist
     --ignore-errors
 
     # One folder for all MP3 files
-    --paths "C:\YT-DLP\Downloads"
+    --paths "C:\YT-DLP\AMBIENT_SOUNDS"
     --output "%(title)s [%(id)s].%(ext)s"
 
+The live config is `C:\YT-DLP\yt-dlp.conf`; the version-controlled backup for restoring this setup is [yt-dlp.conf](../yt-dlp.conf). Keep the backup synchronized if the live settings change.
 
-* Playlists can be downloaded using commands like: C:\YT-DLP\yt-dlp.exe --yes-playlist --ignore-errors -x --audio-format mp3 -P "C:\YT-DLP\Downloads" -o "%(title)s [%(id)s].%(ext)s" "https://www.youtube.com/playlist?list=PLntykjs-tuy7IHk8I78imQYi_Shk0M57y"
+* Playlists can be downloaded using commands like: C:\YT-DLP\yt-dlp.exe --yes-playlist --ignore-errors -x --audio-format mp3 --embed-thumbnail --convert-thumbnails jpg -P "C:\YT-DLP\AMBIENT_SOUNDS" -o "%(title)s [%(id)s].%(ext)s" "https://www.youtube.com/playlist?list=PLntykjs-tuy7IHk8I78imQYi_Shk0M57y"
 
 
 
 ## SESSION 2
 * CRITICAL CONCERN: Security updates: what do i do here; how often should i do this, and is it really needed if i only download directly from yotuube? 
+GPT 6 answer: For your specific use case—downloading selected YouTube playlists as MP3 files—the security risk is very low. I would still recommend occasional updates, but there's no reason to constantly monitor releases.
 
-GPT 6 answer: For your specific use case—downloading selected YouTube playlists as MP3 files—the security risk is very low. I would still recommend occasional updates, but there's no reason to constantly monitor releases. 
+ADDITIONAL INFO was put inside the GPT 6 assessment on security.
